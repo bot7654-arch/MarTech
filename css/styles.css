@@ -1,0 +1,594 @@
+/* Сброс базовых стилей */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Сброс стилей для списка */
+ol, ul {
+  list-style: none;
+}
+
+/* Сброс стилей для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Сброс стилей для таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Сброс стилей для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Сброс стилей для формы */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+
+/* fraunces-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/fraunces-v32-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fraunces-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/fraunces-v32-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/fraunces-v32-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Стили для body */
+body {
+  background-color: white; /* Цвет фона страницы */
+  color: #333;
+  line-height: 1.6;
+  background-image: url('../img/background.jpg'); /* Указываем путь к изображению */
+  background-size: cover; /* Масштабируем изображение, чтобы оно полностью покрывало экран */
+  background-position: center; /* Выравнивание изображения по центру */
+  background-repeat: no-repeat; /* Запрещаем повторение изображения */
+  background-attachment: fixed;
+  height: 100vh; /* Высота на весь экран */
+  max-width: 100%;
+  display: flex;
+  justify-content: center; /* Центрирование элементов по горизонтали */
+  align-items: flex-start; /* Центрирование элементов по вертикали (с верхним выравниванием) */
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  padding: 0px; /* Добавляем отступ для лучшего восприятия */
+}
+
+/* Контейнер для всего содержимого */
+.container {
+  display: flex;
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  align-items: center; /* Горизонтальное выравнивание всех элементов */
+  justify-content: flex-start; /* Центрируем элементы по вертикали сверху */
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Логотип */
+.logo {
+  width: 100px;  /* Ширина логотипа */
+  height: 100px; /* Высота логотипа */
+  margin-bottom: 20px; /* Отступ снизу */
+  transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Контейнер для текста */
+.project-container {
+  width: 100%;
+  max-width: 800px; /* Максимальная ширина */
+  margin-top: 2300px; /* Добавляем отступ сверху */
+  background-color: none;
+  display: flex; /* Используем flexbox для выравнивания элементов по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  color: white;
+  transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+
+
+.project-container:hover .logo {
+  transform: scale(1.2); /* Увеличиваем элементы при наведении */
+}
+
+/* Другие стили для текста и кнопки */
+.text-block {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 64px;
+  color: white;
+  margin-top: 35px;
+}
+
+.p1 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 64px;
+  color: white;
+}
+
+.p2 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 64px;
+  color: white;
+  margin-top: 5px;
+}
+
+.p3 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+}
+
+.p4 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+}
+
+.cta-button {
+  font-family: 'Fraunces', serif; /* Шрифт кнопки */
+  font-weight: 300; /* Толщина шрифта */
+  font-size: 32px; /* Размер шрифта */
+  color: white; /* Белый текст */
+  display: inline-flex; /* Используем flexbox для кнопки */
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  background-color: none; /* Зеленый фон */
+  text-decoration: none; /* Убираем подчеркивание */
+  border: 2px solid white; /* Белая рамка */
+  border-radius: 10px; /* Закругленные углы */
+  cursor: pointer; /* Курсор как указатель */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные эффекты */
+  width: 339px; /* Ширина кнопки */
+  height: 85px; /* Высота кнопки */
+  margin-top: 31px;
+  padding: 10px 20px;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.cta-button:hover {
+  background-color: none; /* Темный зеленый при наведении */
+  transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+
+.cta-button:focus {
+  outline: none; /* Убираем контур при фокусе */
+}
+
+.container-text-box {
+  width: 100%;
+  height: 483px;
+  background-color: none;
+  display: flex; /* Используем flexbox для выравнивания элементов по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  margin-top: 491px;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.text1 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+.text2 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+.text3 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.text4 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.text5 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.container-stats {
+  width: 100%;
+  background-color: none;
+  margin-left: 348px;
+  display: flex;
+  flex-direction: row;
+  gap: 153px;
+}
+
+.column-1 {
+  width: 158px;
+  height: 118px;
+}
+
+.column-1-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  color: white;
+}
+
+.column-1-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+.column-2 {
+  width: 158px;
+  height: 118px;
+}
+
+.column-2-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  color: white;
+}
+
+.column-2-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+.column-3 {
+  width: 158px;
+  height: 118px;
+}
+
+.column-3-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  color: white;
+}
+
+.column-3-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+.column-4 {
+  width: 158px;
+  height: 118px;
+}
+
+.column-4-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  color: white;
+}
+
+.column-4-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+.container-box {
+  width: 100%;
+  background-color: none;
+  margin-top: 367px;
+  display: flex; /* Используем flexbox для выравнивания элементов по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center; /* Центрируем элементы по горизонтали */ 
+  margin-left: auto; /* Автоматический отступ слева */
+  margin-right: auto; /* Автоматический отступ справа */
+  flex-direction: column;
+}
+
+.container-box-1 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  color: white;
+  
+}
+
+.container-box-2 {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+  
+}
+
+.container-graph {
+  width: 1298px;
+  height: 347px;
+  margin-top: 76px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  background-color: none;
+  gap: 190px;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.graph-1 {
+  width: 350px;
+  height: 334px;
+}
+
+.graph-image-1 {
+  width: 100px;
+  height: 100px;
+}
+
+.graph-column-1-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  color: white;
+}
+
+.graph-column-1-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+}
+
+.graph-2 {
+  width: 350px;
+  height: 334px;
+}
+
+.graph-image-2 {
+  width: 100px;
+  height: 100px;
+}
+
+.graph-column-2-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  color: white;
+}
+
+.graph-column-2-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+}
+
+.graph-3 {
+  width: 350px;
+  height: 334px;
+}
+
+.graph-image-3 {
+  width: 100px;
+  height: 100px;
+}
+
+.graph-column-3-a {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  color: white;
+}
+
+.graph-column-3-b {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  background-color: none; /* Темный фон */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 20px 0; /* Отступы сверху и снизу */
+  margin-top: 180px; /* Расстояние от других элементов на 80px */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+
+
+/* Стили для ссылок */
+footer a {
+  color: none; /* Цвет ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  margin: 0 10px; /* Отступы между ссылками */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+  color: none; /* Цвет ссылок при наведении */
+}
+
+
+@media screen and (max-width: 767px) {
+  
+  .body {
+    background-image: url(../img/background-mobile.jpg);
+  }
+
+  .project-container {
+    margin-top: 4000px;
+  }  
+  
+  .text-block, .p1, .p2 {
+    font-size: 32px; /* Уменьшаем размер текста */
+  }
+
+  .p3, .p4 {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    width: 100%; /* Кнопка на весь экран */
+    font-size: 24px;
+  }
+
+  .container-stats {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .container-text-box, .text1, .text2 {
+    font-size: 32px;
+  }
+  
+  .text3, .text4 {
+    font-size: 16px;
+  }
+
+
+  .container-stats {
+    display: flex;
+    flex-direction: column; /* Переводим колонки в вертикальный стек */
+    align-items: center; /* Выравниваем по горизонтали */
+    justify-content: center; /* Выравниваем по вертикали */
+    gap: 80px; /* Добавляем отступы между колонками */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  }
+  
+  .container-stats .column-1,
+  .container-stats .column-2,
+  .container-stats .column-3,
+  .container-stats .column-4 {
+    text-align: center;
+  }
+
+  .container-box, .container-box-1, 
+  .container-box, .container-box-2,
+  .container-box, .container-box-3,
+  .container-box, .container-box-4 {
+    display: flex;
+    align-items: center; /* Выравниваем по горизонтали */
+    justify-content: center; /* Выравниваем по вертикали */
+    word-wrap: break-word;
+    text-align: center;
+    width: 100%; /* Устанавливаем ширину на 100% */
+    box-sizing: border-box; /* Учитываем паддинги и границы в расчет ширины */
+  }
+
+  .container-box, .container-box-1 {
+    font-size: 24px;
+  }
+
+  .container-box, .container-box-2 {
+    font-size: 18px;
+  }
+
+  .container-graph {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  footer {
+    font-size: 16px; /* Меньше шрифт для мобильных */
+    padding: 10px 0;
+    margin-top: 980px;
+  }
+}
